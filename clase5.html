@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 5 - jQuery</title>
+    <!--<script src="../Javascript 90321/jquery-3.6.0.min.js"></script>-->
+    <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/d3js/6.6.0/d3.min.js"></script>
+</head>
+
+<body>
+    <header>
+    <h1 id="titulo_principal">jquery</h1>
+    <h2>Introduccion</h2>
+    <p class="info_importante">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ullam nam itaque repellat.
+        Numquam ipsum laboriosam temporibus, quae fuga tempora expedita quam dolore iste! Laboriosam sed quaerat ullam
+        eveniet ad?</p>
+        <p onclick="saludar('Juan Pablo')" id="saludo1">saludar</p>
+        <select><br><br>
+            <option value="PHP">personal homes pages</option>
+            <option value="ASP">active server pages</option>
+            <option value="JSP">java server pages</option> 
+        </select><br>
+        <div style="background-color: aqua;font-size: 40px;width: 200px;height: 100px;">div contenedor</div>
+        <br><br>
+        <div style="background-color: blueviolet;font-size: 40px;width: 200px;height: 100px;display: none;" id="mostrarDIV">OTRO DIV</div>
+    <br>
+    <button id="mostrarDIV">mostrar DIV</button>
+    <button id="ocultarDIV">ocultar DIV</button>
+    
+    
+    </header> 
+    
+
+        <button id="mostrarocultar">Mostrar/Ocultar</button>
+    
+    <script>
+        var oculta = false;
+    
+    //document.getElementById('titulo_principal').innerHTML = 'Calse5-jQuery';
+        $('#titulo_principal').text('Clase 5 - jQuery');
+        $('.info_importante').text('este parrafo es lo mas importante!!!');
+        $('h2').text('introduccion a Jquery 3.6.0');
+
+        $('select').change(mostrarSeleccion);
+        $('#mostrarocultar').click(mostrarocultar);
+        $('#mostrarDIV').click(mostrarDIV);
+        $('#ocultarDIV').click(ocultarDIV);
+
+
+        function saludar(param) {
+            $('#saludo1').text('buen dia ' + param);
+        }
+        function mostrarSeleccion(params) {
+            var valorSeleccionado = $('select').val();
+            //alert(valorSeleccionado);
+            $('div').text(valorSeleccionado);
+        }
+
+        function mostrarocultar() {
+           if(oculta == false)
+           {
+            $('header').hide();
+            oculta = true;
+           }
+            else 
+            {
+                $('header').show();
+                oculta = false;
+            }
+        }
+
+       function mostrarDIV() {
+           $('#div_oculto').show();
+           $('#mostrarDIV').hide();
+           $('#ocultarDIV').show();
+            }
+        function ocultarDIV() {
+           $('#div_oculto').hide();
+           $('#ocultarDIV').hide();
+           $('#mostrarDIV').show();
+        } 
+    </script>
+
+</body>
+
+</html>

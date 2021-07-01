@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 4 - Eventos</title>
+</head>
+
+<body>
+    <h1 onmouseover="alert ('Estoy encima del titulo principal')">Eventos</h1>
+    <button onclick="alert ('hice click en el boton')">hacer click</button><br><br>
+    <button onclick="cambiardecolor()">cambiar de color</button><br><br>
+    <button onclick="cambiararojo('red','Verdana')">cambiar a rojo</button><br><br>
+    <div id="recuadro" style="width: 50px;height: 50px;background-color: cadetblue;">
+        DIV
+    </div>
+    <div style="background-color: coral;width: 200px;height: 250px;">
+        <p onmousemove="avisar()">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore adipisci magnam quam, nisi dolor numquam,
+            unde voluptatem quibusdam ipsam eveniet placeat blanditiis consectetur ullam earum exercitationem hic esse
+            expedita iusto!<br><br>
+        </p><br><br>
+        <br><br>
+        <input type="text" onchange="mostrar ('esta cambiando el contenido de input')"
+        onclick = "mostrar ('debe ingresar texto')"><br><br>
+        <input type="text" onblur="mostrar ('me estoy yendo del input')"><br><br>
+        <input type="text" onfocus= ""><br><br>
+        <input type="text" onkeypress="mostrar ('estoy en el 4to input')"><br><br>
+        <input type="text"onkeyup="mostrar ('presione y solte una tecla')"><br><br>
+
+
+    </div>
+    <script>
+        function cambiardecolor() {
+            if (document.getElementById('recuadro').style.backgroundColor == "cadetblue") {
+                document.getElementById('recuadro').style.backgroundColor == "orange";
+            }
+            else {
+                document.getElementById('recuadro').style.backgroundColor = "cadetblue";
+            }
+        }
+        function cambiararojo(parametro1, parametro2) {
+            document.getElementById('recuadro').style.backgroundColor = parametro1;
+            document.getElementById('recuadro').style.fontFamily = parametro2;
+        }
+        function avisar() {
+            alert('evento onmousemove sobre el parrafo')
+        }
+        function mostrar(params) {
+            alert(param);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Hide & Show</title>
+</head>
+
+<body>
+    <h1>ejercicio hide - show</h1>
+    <div id="container" style="background-color: beige;">
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque voluptas praesentium ducimus veniam,
+            incidunt corporis
+            deleniti dicta repudiandae. Quibusdam reprehenderit, repudiandae sit consectetur nisi asperiores sint illum
+            ipsum esse
+            nulla.</p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque voluptas praesentium ducimus veniam,
+            incidunt corporis
+            deleniti dicta repudiandae. Quibusdam reprehenderit, repudiandae sit consectetur nisi asperiores sint illum
+            ipsum esse
+            nulla.</p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque voluptas praesentium ducimus veniam,
+            incidunt corporis
+            deleniti dicta repudiandae. Quibusdam reprehenderit, repudiandae sit consectetur nisi asperiores sint illum
+            ipsum esse
+            nulla.</p>
+        </p>
+    </div>
+    <button id="ocultar">Ocultar contenido</button>
+<script src="../Javascript 90321/jquery-3.6.0.min.js"></script>
+<script>
+
+
+    $('button').click(OcultarMostrar);
+    
+    function OcultarMostrar() {
+        if (oculto == false)
+        {
+            $('#container').hide ();
+            $('#ocultar').text('Mostrar Contenido');
+            oculto = true;
+            $('h1').html('<strong style= "color:blue; font-family:Verdana;"><em>Contenido Oculto'</em></strong>);
+        }
+        else
+        {
+            $('#container').show();
+            $('#ocultar').text('Ocultar contenido');
+            oculto = true; 
+         
+        }
+        
+        $('#container').hide();
+
+    }
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+<body>
+    <h1>funciones</h1>
+    <div style="background-color: aqua;width: 100px;height: 100px;" id="resultado1"></div>    
+    <div style="background-color: rosybrown;width: 100px;height: 100px; ;" id="resultado2"></div>
+    <label>Ingrese el 1° numero: <br>
+        <input type="number" id="nro1">
+    </label><br> <br>
+    <label>Ingrese el 2° numero: <br>
+        <input type="number" id="nro2">
+    </label><br> <br>
+    <button onclick="sumar()">sumar</button>
+    <script>
+        function sumar() {
+          var numero1 = document.getElementById('nro1').value;
+          var numero2 = document.getElementById('nro2').value;
+          //console.log (parseInt  (numero1) + parseInt (numero2));
+          document.getElementById('resultado1').innerHTML = parseInt  (numero1) + parseInt (numero2);
+
+         }
+
+    
+    </script>
+</body>
+</html>
